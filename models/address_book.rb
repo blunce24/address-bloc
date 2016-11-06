@@ -44,7 +44,12 @@ class AddressBook
         lower = mid + 1
       end
     end
-    
+
     return nil
   end
+
+  def detonate
+    @entries = []
+  end
+
 end
