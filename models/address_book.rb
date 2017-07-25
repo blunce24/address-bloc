@@ -1,12 +1,9 @@
 require_relative 'entry'
-require "csv"
+require 'csv'
+require 'bloc_record/base'
 
-class AddressBook
+class AddressBook < BlocRecord::Base
   attr_reader :entries
-
-  def initialize
-    @entries = []
-  end
 
   def add_entry(name, phone_number, email)
     index = 0
@@ -44,7 +41,7 @@ class AddressBook
         lower = mid + 1
       end
     end
-    
+
     return nil
   end
 end
